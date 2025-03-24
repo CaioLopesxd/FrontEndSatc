@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="https://httpbin.org/post" method="post">
+        <div>
+            <label for="user">Nome:</label>
+            <input type="text" name="user" id="user">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="passwd">Senha:</label>
+            <input type="password" name="passwd" id="passwd">
+        </div>
+        <div>
+            <label for="estados">Estados:</label>
+            <select name="estados" id="estados">
+                <option value="sc">Santa Catarina</option>
+                <option value="rs">Rio Grande do Sul</option>
+                <option value="pr">Paraná</option>
+            </select>
+        </div>
+        <div>
+            <label for="verdade">check</label>
+            <input type="checkbox" name="verdade" id="verdade">
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+    <p><a href="01.html">Navegar</a></p>	
+</body>
+</html>
