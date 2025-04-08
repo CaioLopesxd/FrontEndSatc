@@ -182,8 +182,8 @@
 
       function saveMessage() {
         const textInput = document.querySelector("#inputMessage");
-
-        if (textInput.value === "") {
+        
+        if (textInput.value.trim() === "") {
           textInput.focus();
           return;
         }
