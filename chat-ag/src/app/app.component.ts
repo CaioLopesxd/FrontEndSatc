@@ -10,10 +10,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-    messages = [
+  title = 'chat-ag';
+  showChat = false;
+  showLogin = true;
+
+
+  messages = [
     { from: 'atendente', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
     { from: 'atendente', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { from: 'you', text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    {
+      from: 'you', text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
                           Consequuntur nisi nemo veritatis sint. Non nostrum ipsa illo ut
                           maiores esse, quas cumque? Dolorem odio assumenda sequi soluta
                           sunt laborum dolores!` },
