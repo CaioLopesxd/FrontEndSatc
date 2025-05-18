@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="chatBox">
+    <div class="chatHead">
+      <h2>Atendimento Online</h2>
+    </div>
+    <div class="chatContent" #chatContent>
+      <div *ngFor="let msg of messages">
+        <div [ngClass]="msg.from === 'you' ? 'youMessage' : ''">
+          <h4>{{ msg.from === 'you' ? 'Você diz:' : 'Atendente diz:' }}</h4>
+          <div class="message">
+            <p>{{ msg.text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chatFooter">
+      <input
+        type="text"
+        class="input"
+        placeholder="Digite sua mensagem..."
+        [(ngModel)]="newMessage"
+        (keyup.enter)="sendMessage(chatContent)"
+      />
+      <button class="btn" (click)="sendMessage(chatContent)">Enviar</button>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet />
