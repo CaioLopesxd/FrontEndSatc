@@ -14,6 +14,7 @@ function Message({ text, from, index }) {
   );
 }
 
+
 function App() {
   const [messages, setMessages] = useState([
     { from: "atendente", text: "Olá! Como posso ajudar?" },
@@ -30,8 +31,8 @@ function App() {
 
   return (
     <>
-      <div class="chatBox">
-        <div class="chatHead">
+      <div className="chatBox">
+        <div className="chatHead">
           <h2>Atendimento Online</h2>
         </div>
 
@@ -40,17 +41,17 @@ function App() {
             <Message text={msg.text} index={index} from={msg.from} />
           ))}
         </div>
-        <div class="chatFooter">
+        <div className="chatFooter">
           <input
             id="inputMessage"
-            class="input"
+            className="input"
             type="text"
             placeholder="Digite Sua mensagem"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSend()}
           />
-          <button id="sendBtn" onClick={handleSend} class="btn">
+          <button id="sendBtn" onClick={handleSend} className="btn">
             Enviar
           </button>
         </div>
